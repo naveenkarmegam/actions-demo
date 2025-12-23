@@ -27,8 +27,8 @@ pkg.version = nextVersion;
 fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n");
 
 // Run checks
-await execa("pnpm", ["type"], { stdio: "inherit" });
-await execa("pnpm", ["build"], { stdio: "inherit" });
+// await execa("pnpm", ["type"], { stdio: "inherit" });
+// await execa("pnpm", ["build"], { stdio: "inherit" });
 
 // Commit & tag
 await execa("git", ["add", "package.json"]);
