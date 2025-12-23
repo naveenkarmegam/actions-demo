@@ -24,7 +24,7 @@
     "type": "vue-tsc --noEmit",
     "prepare": "husky",
     "pre-commit": "lint-staged",
-    "release": "node release.js"
+    "release": "node script/release.js"
   },
   "dependencies": {
     "vitepress": "^1.6.4",
