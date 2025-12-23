@@ -25,6 +25,11 @@ jobs:
         with:
           node-version: 22
           # cache: pnpm
+          
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - run: pnpm install
       - run: pnpm release ${{ inputs.releaseType }}
